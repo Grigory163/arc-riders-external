@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="release|x64">
+      <Configuration>release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{0f536030-83c9-4525-b6e5-fbcf3a7e4aa7}</ProjectGuid>
+    <RootNamespace>valorantexternal</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <TargetName>arc</TargetName>
+    <OutDir>..\build\bin</OutDir>
+    <IntDir>..\build</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+    <IncludePath>$(SolutionDir)\overlay\framework\freetype\;$(SolutionDir)\overlay\framework\freetype\freetype\;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(SolutionDir)\imgui;$(SolutionDir)\overlay\framework\include;$(SolutionDir)\utilities\unicorn\unicorn;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(SolutionDir)\overlay\framework\freetype;$(SolutionDir)\utilities\unicorn\unicorn\build;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='release|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <EnableFiberSafeOptimizations>false</EnableFiberSafeOptimizations>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="driver\initialization\initialization.cpp" />
+    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="game\game.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="overlay\menu\menu.cpp" />
+    <ClCompile Include="overlay\overlay.cpp" />
+    <ClCompile Include="utilities\process\process.cpp" />
+    <ClCompile Include="utilities\unicorn\emulator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="driver\authentication\otp.hpp" />
+    <ClInclude Include="driver\authentication\time\time.hpp" />
+    <ClInclude Include="driver\initialization\initialization.hpp" />
+    <ClInclude Include="driver\initialization\resources.hpp" />
+    <ClInclude Include="features\aimbot\aimbot.hpp" />
+    <ClInclude Include="features\features.hpp" />
+    <ClInclude Include="features\visuals\visuals.hpp" />
+    <ClInclude Include="game\game.hpp" />
+    <ClInclude Include="game\sdk\decryptions\decryptions.hpp" />
+    <ClInclude Include="game\sdk\offsets.hpp" />
+    <ClInclude Include="game\sdk\types\types.hpp" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="imgui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="includes\definitions\definitions.hpp" />
+    <ClInclude Include="driver\driver.hpp" />
+    <ClInclude Include="globals\globals.hpp" />
+    <ClInclude Include="includes\includes.hpp" />
+    <ClInclude Include="overlay\menu\menu.hpp" />
+    <ClInclude Include="overlay\overlay.hpp" />
+    <ClInclude Include="overlay\resource\font.hpp" />
+    <ClInclude Include="utilities\importer\importer.hpp" />
+    <ClInclude Include="utilities\math\math.hpp" />
+    <ClInclude Include="utilities\memory\memory.hpp" />
+    <ClInclude Include="utilities\process\process.hpp" />
+    <ClInclude Include="utilities\unicorn\emulator.hpp" />
+    <ClInclude Include="utilities\unicorn\unicorn\arm.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\arm64.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\list.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\qemu.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\uc_priv.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\arm.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\arm64.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\m68k.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\mips.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\platform.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\ppc.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\riscv.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\s390x.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\sparc.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\tricore.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\unicorn.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\include\unicorn\x86.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\m68k.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\mips.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\platform.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\ppc.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\riscv.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\s390x.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\sparc.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\tricore.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\unicorn.h" />
+    <ClInclude Include="utilities\unicorn\unicorn\x86.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

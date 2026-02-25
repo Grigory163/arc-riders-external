@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "arc-raiders-external", "arc-raiders-external.vcxproj", "{0F536030-83C9-4525-B6E5-FBCF3A7E4AA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		release|x64 = release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F536030-83C9-4525-B6E5-FBCF3A7E4AA7}.release|x64.ActiveCfg = release|x64
+		{0F536030-83C9-4525-B6E5-FBCF3A7E4AA7}.release|x64.Build.0 = release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BEC9B0B-19A4-4B6D-8EFD-099AFEF98273}
+	EndGlobalSection
+EndGlobal

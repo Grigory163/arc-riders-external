@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="entry.cpp" />
+    <ClCompile Include="driver\initialization\initialization.cpp" />
+    <ClCompile Include="utilities\process\process.cpp" />
+    <ClCompile Include="utilities\hvci\hvci.cpp" />
+    <ClCompile Include="game\game.cpp" />
+    <ClCompile Include="overlay\overlay.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\includes.hpp" />
+    <ClInclude Include="driver\authentication\time\time.hpp" />
+    <ClInclude Include="driver\authentication\otp.hpp" />
+    <ClInclude Include="includes\definitions\definitions.hpp" />
+    <ClInclude Include="driver\initialization\resources.hpp" />
+    <ClInclude Include="driver\initialization\initialization.hpp" />
+    <ClInclude Include="driver\driver.hpp" />
+    <ClInclude Include="utilities\process\process.hpp" />
+    <ClInclude Include="globals\globals.hpp" />
+    <ClInclude Include="utilities\hvci\hvci.hpp" />
+    <ClInclude Include="utilities\memory\memory.hpp" />
+    <ClInclude Include="game\game.hpp" />
+    <ClInclude Include="utilities\math\math.hpp" />
+    <ClInclude Include="overlay\overlay.hpp" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="imgui\imgui_impl_win32.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+  </ItemGroup>
+</Project>
